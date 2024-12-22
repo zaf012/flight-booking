@@ -62,10 +62,12 @@ Bu proje, bir uçak bileti rezervasyon sisteminin backend uygulamasıdır. Sprin
 
 ##### 1. Aynı koltuğu aynı anda satın almak isteyen iki yolcu
 - POST /api/simulation/concurrent-purchase
+
 ![img_3.png](img_3.png)
 
 ##### 2. Belirli Bir Uçuşu Getirme
 - GET /api/flights/get-flight/{id}
+
 ![img_1.png](img_1.png)
 
 
