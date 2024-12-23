@@ -4,13 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 //    AVAILABLE,
-//    RESERVED,
 //    SOLD
 
 public enum SeatStatus {
-    AVAILABLE("PENDING_APPROVAL"),
-    RESERVED("MOVED_TO_LOADED_FOLDER"),
-    SOLD("APPROVED");
+    AVAILABLE("AVAILABLE"),
+    SOLD("SOLD");
 
     private static final Map<String, SeatStatus> lookup = new HashMap<>();
 

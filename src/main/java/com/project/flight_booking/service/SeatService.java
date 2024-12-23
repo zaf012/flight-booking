@@ -6,7 +6,6 @@ import com.project.flight_booking.enums.SeatStatus;
 import com.project.flight_booking.exception.ValidationException;
 import com.project.flight_booking.repository.FlightRepository;
 import com.project.flight_booking.repository.SeatRepository;
-import com.project.flight_booking.service.mapper.SeatMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -21,13 +20,11 @@ public class SeatService {
     private static final Logger log = LoggerFactory.getLogger(SeatService.class);
     private final SeatRepository seatRepository;
     private final FlightRepository flightRepository;
-    private final SeatMapper seatMapper;
 
 
-    public SeatService(SeatRepository seatRepository, FlightRepository flightRepository, SeatMapper seatMapper) {
+    public SeatService(SeatRepository seatRepository, FlightRepository flightRepository) {
         this.seatRepository = seatRepository;
         this.flightRepository = flightRepository;
-        this.seatMapper = seatMapper;
     }
 
     private void validateSeat(Seat seat, Long flightId) {

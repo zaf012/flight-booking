@@ -18,6 +18,4 @@ public interface SeatRepository extends JpaRepository<Seat, Long> {
 
     @Query("SELECT COUNT(s) > 0 FROM Seat s WHERE s.flight.id = :flightId AND s.seatNumber = :seatNumber")
     boolean existsByFlightIdAndSeatNumber(@Param("flightId") Long flightId, @Param("seatNumber") String seatNumber);
-
-    Optional<Seat> findByFlightIdAndSeatNumber(Long flightId, String seatNumber);
 }
